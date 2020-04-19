@@ -1,5 +1,5 @@
 {
-  "bind_addr": "{{ GetInterfaceIP \"nebula1\" }}",
+  "bind_addr": "{{ GetAllInterfaces | include \"network\" \"169.254.0.0/16\" | attr \"address\" }},
   "datacenter": "global",
   "retry_join": ["169.254.0.1"]
 }
