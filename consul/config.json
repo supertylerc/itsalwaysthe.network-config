@@ -1,0 +1,5 @@
+{
+  "bind_addr": "{{ GetInterfaceIP \"eth0\" }}",
+  "datacenter": "global",
+  "retry_join": ["169.254.0.1"]
+}
